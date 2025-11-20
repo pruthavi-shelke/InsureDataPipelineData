@@ -2,6 +2,7 @@ import pandas as pd
 from datetime import datetime
 # get valid files to process
 def preprocess_file(files_to_process):
+    parquet_file_list = []
     # read csv files
     for file in files_to_process:
         df = pd.read_csv(file)
@@ -20,6 +21,9 @@ def preprocess_file(files_to_process):
         file_path_split = file.split("/")
         file_name_with_ext = file_path_split[-1]
         file_name = file_name_with_ext.split(".")[0]
-        df.to_parquet("../data/preprocessed/"+file_name+".parquet")
+        parquet_file = "../data/preprocessed/"+file_name+".parquet"
+        df.to_parquet(parquet_file)
+        parquet_file_list.append(parquet_file)
+    return parquet_file_list
 
 
