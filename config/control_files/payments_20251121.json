@@ -1,11 +1,11 @@
 {
-  "file_name": "claims_yyyymmdd.csv",
+  "file_name": "payments_20251121.csv",
   "expected_rows": 3,
   "expected_columns": [
-    "Claim_ID",
+    "Payment_ID",
     "Policy_ID",
-    "Claim_Amount",
-    "Claim_Date"
+    "Payment_Date",
+    "Payment_Amount"
   ],
   "expected_extension": ".csv"
 }

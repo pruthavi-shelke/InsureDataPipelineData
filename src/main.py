@@ -1,5 +1,5 @@
 from ingestion_manager import validate
-
+from preprocessing_engine import preprocess_file
 
 valid_files = validate()
-print(valid_files)
+preprocess_file(valid_files)
